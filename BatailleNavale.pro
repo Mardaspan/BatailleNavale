@@ -14,12 +14,14 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         board.cpp \
-    ship.cpp \
-    carrier.cpp \
-    battleship.cpp \
-    cruiser.cpp \
-    submarine.cpp \
-    destroyer.cpp
+        ship.cpp \
+        carrier.cpp \
+        battleship.cpp \
+        cruiser.cpp \
+        submarine.cpp \
+        destroyer.cpp \
+        home.cpp \
+        shipchoice.cpp
 
 HEADERS  += board.h \
     ship.h \
@@ -27,6 +29,11 @@ HEADERS  += board.h \
     battleship.h \
     cruiser.h \
     submarine.h \
-    destroyer.h
+    destroyer.h \
+    home.h \
+    shipchoice.h
 
-FORMS    += board.ui
+FORMS    += \
+    BattleScreen.ui \
+    home.ui \
+    shipchoice.ui

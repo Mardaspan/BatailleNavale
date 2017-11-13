@@ -1,11 +1,12 @@
 #include "board.h"
+#include "home.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    Board w;
-    w.show();
+    Home y;
+    y.show();
 
     return a.exec();
 }
