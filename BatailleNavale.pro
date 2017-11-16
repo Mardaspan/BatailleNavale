@@ -13,7 +13,6 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        board.cpp \
         ship.cpp \
         carrier.cpp \
         battleship.cpp \
@@ -21,9 +20,10 @@ SOURCES += main.cpp\
         submarine.cpp \
         destroyer.cpp \
         home.cpp \
-        shipchoice.cpp
+        shipchoice.cpp \
+    BattleScreen.cpp
 
-HEADERS  += board.h \
+HEADERS  += \
     ship.h \
     carrier.h \
     battleship.h \
@@ -31,7 +31,8 @@ HEADERS  += board.h \
     submarine.h \
     destroyer.h \
     home.h \
-    shipchoice.h
+    shipchoice.h \
+    BattleScreen.h
 
 FORMS    += \
     BattleScreen.ui \
