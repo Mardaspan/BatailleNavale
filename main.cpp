@@ -1,4 +1,4 @@
-#include "board.h"
+#include "BattleScreen.h"
 #include "home.h"
 #include <QApplication>
 
