@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>1050</width>
     <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Bataille Navale</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QTableWidget" name="tableWidget_2">
@@ -19,8 +19,8 @@
      <rect>
       <x>550</x>
       <y>40</y>
-      <width>500</width>
-      <height>500</height>
+      <width>471</width>
+      <height>471</height>
      </rect>
     </property>
     <property name="rowCount">
@@ -124,8 +124,8 @@ p, li { white-space: pre-wrap; }
      <rect>
       <x>0</x>
       <y>40</y>
-      <width>500</width>
-      <height>500</height>
+      <width>471</width>
+      <height>471</height>
      </rect>
     </property>
     <property name="rowCount">
@@ -230,7 +230,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1050</width>
      <height>20</height>
     </rect>
    </property>
