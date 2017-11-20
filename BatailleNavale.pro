@@ -21,7 +21,8 @@ SOURCES += main.cpp\
         destroyer.cpp \
         home.cpp \
         shipchoice.cpp \
-    BattleScreen.cpp
+    BattleScreen.cpp \
+    battlescreen.cpp
 
 HEADERS  += \
     ship.h \
@@ -32,9 +33,11 @@ HEADERS  += \
     destroyer.h \
     home.h \
     shipchoice.h \
-    BattleScreen.h
+    BattleScreen.h \
+    battlescreen.h
 
 FORMS    += \
     BattleScreen.ui \
     home.ui \
-    shipchoice.ui
+    shipchoice.ui \
+    battlescreen.ui
