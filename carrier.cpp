@@ -1,6 +1,5 @@
 #include "carrier.h"
 
-Carrier::Carrier()
+Carrier::Carrier() : Ship(5)
 {
-    Ship(5);
 }

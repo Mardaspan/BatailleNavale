@@ -1,6 +1,5 @@
 #include "battleship.h"
 
-Battleship::Battleship()
+Battleship::Battleship() : Ship(4)
 {
-    Ship(4);
 }

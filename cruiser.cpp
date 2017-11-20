@@ -1,6 +1,5 @@
 #include "cruiser.h"
 
-Cruiser::Cruiser()
+Cruiser::Cruiser() : Ship(3)
 {
-    Ship(3);
 }

@@ -3,7 +3,7 @@
 
 BattleScreen:: BattleScreen(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui:: BattleScreen)
+    ui(new Ui::BattleScreen)
 {
     ui->setupUi(this);
 }
@@ -12,3 +12,4 @@ BattleScreen:: BattleScreen(QWidget *parent) :
 {
     delete ui;
 }
+

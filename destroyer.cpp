@@ -1,6 +1,5 @@
 #include "destroyer.h"
 
-Destroyer::Destroyer()
+Destroyer::Destroyer() : Ship(2)
 {
-    Ship(2);
 }

@@ -1,6 +1,5 @@
 #include "submarine.h"
 
-Submarine::Submarine()
+Submarine::Submarine() : Ship(3)
 {
-    Ship(3);
 }
