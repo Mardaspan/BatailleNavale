@@ -6,8 +6,7 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    ShipChoice y;
+    Home y;
     y.show();
-
     return a.exec();
 }

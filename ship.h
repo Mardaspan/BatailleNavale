@@ -1,8 +1,9 @@
 #ifndef SHIP_H
 #define SHIP_H
 
+#include <QWidget>
 
-class Ship
+class Ship : public QWidget
 {
     int size;
     bool sunk;
