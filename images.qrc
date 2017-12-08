@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/images">
+        <file alias="empire_battleship">images/empire_battleship.png</file>
+        <file alias="empire_carrier">images/empire_carrier.png</file>
+        <file alias="empire_cruiser">images/empire_cruiser.png</file>
+        <file alias="empire_destroyer">images/empire_destroyer.png</file>
+        <file alias="empire_submarine">images/empire_submarine.png</file>
+        <file alias="republic_battleship">images/republic_battleship.png</file>
+        <file alias="republic_carrier">images/republic_carrier.png</file>
+        <file alias="republic_cruiser">images/republic_cruiser.png</file>
+        <file alias="republic_destroyer">images/republic_destroyer.png</file>
+        <file alias="republic_submarine">images/republic_submarine.png</file>
+    </qresource>
+</RCC>

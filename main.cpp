@@ -1,12 +1,11 @@
-#include "battlescreen.h"
+#include "game.h"
 #include "home.h"
-#include "shipchoice.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    Home y;
-    y.show();
+    Home home;
+    home.show();
     return a.exec();
 }

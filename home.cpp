@@ -14,8 +14,6 @@ void Home::on_BoutonNP_clicked()
     ShipChoice y;
     this->hide();
     y.exec();
-
-
 }
 
 /*

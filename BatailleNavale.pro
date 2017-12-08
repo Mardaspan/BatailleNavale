@@ -21,7 +21,9 @@ SOURCES += main.cpp\
         destroyer.cpp \
         home.cpp \
         shipchoice.cpp \
-    battlescreen.cpp
+    battlescreen.cpp \
+    game.cpp \
+    board.cpp
 
 HEADERS  += \
     ship.h \
@@ -32,9 +34,14 @@ HEADERS  += \
     destroyer.h \
     home.h \
     shipchoice.h \
-    battlescreen.h
+    battlescreen.h \
+    game.h \
+    board.h
 
 FORMS    += \
     home.ui \
     shipchoice.ui \
     battlescreen.ui
+
+RESOURCES += \
+    images.qrc

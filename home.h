@@ -2,7 +2,6 @@
 #define HOME_H
 
 #include <QDialog>
-
 namespace Ui {
 class Home;
 }

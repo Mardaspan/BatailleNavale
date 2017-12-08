@@ -3,7 +3,9 @@
 
 #include <QDialog>
 #include <QApplication>
-#include <QPushButton>
+#include <QMouseEvent>
+#include <QLabel>
+#include "game.h"
 
 namespace Ui {
 class ShipChoice;
@@ -12,6 +14,8 @@ class ShipChoice;
 class ShipChoice : public QDialog
 {
     Q_OBJECT
+    Game game;
+    QLabel* ship;
 
 public:
     explicit ShipChoice(QWidget *parent = 0);
@@ -22,6 +26,11 @@ private slots:
 
 private:
     Ui::ShipChoice *ui;
+
+protected:
+    void mousePressEvent(QMouseEvent *event) override;
+    void mouseMoveEvent(QMouseEvent *event) override;
+    void mouseReleaseEvent(QMouseEvent *event) override;
 
 };
 
