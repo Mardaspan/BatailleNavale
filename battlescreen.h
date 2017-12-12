@@ -1,13 +1,13 @@
 #ifndef BATTLESCREEN_H
 #define BATTLESCREEN_H
 
-#include <QDialog>
+#include "game.h"
 
 namespace Ui {
 class BattleScreen;
 }
 
-class BattleScreen : public QDialog
+class BattleScreen : public Game
 {
     Q_OBJECT
 

@@ -2,7 +2,7 @@
 #include "ui_battlescreen.h"
 
 BattleScreen::BattleScreen(QWidget *parent) :
-    QDialog(parent),
+    Game(parent),
     ui(new Ui::BattleScreen)
 {
     ui->setupUi(this);

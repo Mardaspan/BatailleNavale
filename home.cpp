@@ -4,7 +4,7 @@
 #include "rules.h"
 
 Home::Home(QWidget *parent) :
-    QDialog(parent),
+    Game(parent),
     ui(new Ui::Home)
 {
     ui->setupUi(this);

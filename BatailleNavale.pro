@@ -24,7 +24,8 @@ SOURCES += main.cpp\
     battlescreen.cpp \
     game.cpp \
     board.cpp \
-    rules.cpp
+    rules.cpp \
+    square.cpp
 
 HEADERS  += \
     ship.h \
@@ -38,7 +39,8 @@ HEADERS  += \
     battlescreen.h \
     game.h \
     board.h \
-    rules.h
+    rules.h \
+    square.h
 
 FORMS    += \
     home.ui \
