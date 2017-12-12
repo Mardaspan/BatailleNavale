@@ -1,20 +1,17 @@
 #ifndef SHIPCHOICE_H
 #define SHIPCHOICE_H
 
-#include <QDialog>
 #include <QApplication>
 #include <QMouseEvent>
-#include <QLabel>
 #include "game.h"
 
 namespace Ui {
 class ShipChoice;
 }
 
-class ShipChoice : public QDialog
+class ShipChoice : public Game
 {
     Q_OBJECT
-    Game game;
     QLabel* ship;
 
 public:

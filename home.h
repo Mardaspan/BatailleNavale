@@ -1,12 +1,13 @@
 #ifndef HOME_H
 #define HOME_H
 
-#include <QDialog>
+#include "game.h"
+
 namespace Ui {
 class Home;
 }
 
-class Home : public QDialog
+class Home : public Game
 {
     Q_OBJECT
 

@@ -4,7 +4,7 @@
 #include <iostream>
 
 ShipChoice::ShipChoice(QWidget *parent) :
-    QDialog(parent),
+    Game(parent),
     ui(new Ui::ShipChoice)
 {
     ui->setupUi(this);
