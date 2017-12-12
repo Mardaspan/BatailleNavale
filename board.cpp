@@ -1,5 +1,4 @@
 #include "board.h"
-#include <iostream>
 
 Board::Board()
 {
@@ -8,14 +7,6 @@ Board::Board()
         for(int j=0; j<NB_SQUARES; j++)
         {
             squares[i][j] = new Square(i*Square::WIDTH+10, j*Square::HEIGHT+10);
-        }
-    }
-
-    for(int a=0; a<NB_SQUARES; a++)
-    {
-        for(int b=0; b<NB_SQUARES; b++)
-        {
-            std::cout << "X = " << squares[a][b]->getX() << " / Y = " << squares[a][b]->getY() << std::endl;
         }
     }
 }
