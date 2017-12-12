@@ -21,6 +21,8 @@ private slots:
 
     //void on_BoutonR_clicked();
 
+    void on_BoutonR_clicked();
+
 private:
     Ui::Home *ui;
 };

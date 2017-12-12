@@ -2,7 +2,7 @@
 #include "ui_battlescreen.h"
 
 BattleScreen::BattleScreen(QWidget *parent) :
-    QMainWindow(parent),
+    QDialog(parent),
     ui(new Ui::BattleScreen)
 {
     ui->setupUi(this);
@@ -11,4 +11,9 @@ BattleScreen::BattleScreen(QWidget *parent) :
 BattleScreen::~BattleScreen()
 {
     delete ui;
+}
+
+void BattleScreen::on_BoutonQuitter_clicked()
+{
+    this->close();
 }

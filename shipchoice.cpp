@@ -1,6 +1,7 @@
 #include "shipchoice.h"
 #include "ui_shipchoice.h"
 #include "home.h"
+#include "battlescreen.h"
 #include <iostream>
 
 ShipChoice::ShipChoice(QWidget *parent) :
@@ -49,4 +50,11 @@ void ShipChoice::mouseReleaseEvent(QMouseEvent *event)
     {
         this->ship = NULL;
     }
+}
+
+void ShipChoice::on_BoutonSuivant_clicked()
+{
+    BattleScreen x;
+    this->hide();
+    x.exec();
 }

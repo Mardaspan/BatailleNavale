@@ -1,6 +1,7 @@
 #include "home.h"
 #include "ui_home.h"
 #include "shipchoice.h"
+#include "rules.h"
 
 Home::Home(QWidget *parent) :
     QDialog(parent),
@@ -16,14 +17,6 @@ void Home::on_BoutonNP_clicked()
     y.exec();
 }
 
-/*
-void Home::on_BoutonR_clicked()
-{
-
-}
-*/
-
-
 void Home::on_BoutonQ_clicked()
 {
     this->close();
@@ -33,4 +26,11 @@ void Home::on_BoutonQ_clicked()
 Home::~Home()
 {
     delete ui;
+}
+
+void Home::on_BoutonR_clicked()
+{
+    Rules x;
+    this->hide();
+    x.exec();
 }

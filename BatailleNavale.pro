@@ -23,7 +23,8 @@ SOURCES += main.cpp\
         shipchoice.cpp \
     battlescreen.cpp \
     game.cpp \
-    board.cpp
+    board.cpp \
+    rules.cpp
 
 HEADERS  += \
     ship.h \
@@ -36,12 +37,14 @@ HEADERS  += \
     shipchoice.h \
     battlescreen.h \
     game.h \
-    board.h
+    board.h \
+    rules.h
 
 FORMS    += \
     home.ui \
     shipchoice.ui \
-    battlescreen.ui
+    battlescreen.ui \
+    rules.ui
 
 RESOURCES += \
     images.qrc

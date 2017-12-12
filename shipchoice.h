@@ -24,6 +24,8 @@ public:
 private slots:
     void on_BoutonRetour_clicked();
 
+    void on_BoutonSuivant_clicked();
+
 private:
     Ui::ShipChoice *ui;
 
