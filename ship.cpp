@@ -6,9 +6,9 @@ Ship::Ship(int s)
     this->sunk = false;
 }
 
-Ship::~Ship()
+int Ship::getSize()
 {
-    delete sprite;
+    return this->size;
 }
 
 bool Ship::isSunk() const
@@ -23,14 +23,4 @@ void Ship::sink()
 
 void Ship::hit()
 {
-}
-
-QLabel* Ship::getSprite()
-{
-    return this->sprite;
-}
-
-void Ship::setSprite(QLabel* image)
-{
-    this->sprite = image;
 }

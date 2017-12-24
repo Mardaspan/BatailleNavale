@@ -6,6 +6,7 @@
 
 class Game : public QDialog
 {
+protected:
     Board player;
     Board ennemy;
 

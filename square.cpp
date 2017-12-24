@@ -1,19 +1,13 @@
 #include "square.h"
 
+Square::Square()
+{
+}
+
 Square::Square(int x, int y)
 {
     this->x = x;
     this->y = y;
-}
-
-int Square::getWidth()
-{
-    return WIDTH;
-}
-
-int Square::getHeight()
-{
-    return HEIGHT;
 }
 
 int Square::getX()

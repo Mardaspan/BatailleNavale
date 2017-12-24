@@ -1,23 +1,20 @@
 #ifndef SHIP_H
 #define SHIP_H
 
-#include <QLabel>
+#include "square.h"
+#include <iostream>
 
 class Ship
 {
     int size;
     bool sunk;
-    QLabel *sprite;
-
 
 public:
     Ship(int s);
-    ~Ship();
+    int getSize();
     bool isSunk() const;
     void sink();
     void hit();
-    QLabel* getSprite();
-    void setSprite(QLabel* image);
 };
 
 #endif // SHIP_H

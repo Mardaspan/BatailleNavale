@@ -2,6 +2,7 @@
 #define SHIPCHOICE_H
 
 #include <QApplication>
+#include <QLabel>
 #include <QMouseEvent>
 #include "game.h"
 
@@ -12,7 +13,8 @@ class ShipChoice;
 class ShipChoice : public Game
 {
     Q_OBJECT
-    QLabel* ship;
+    QLabel* ship = NULL;
+    int startX, startY;
 
 public:
     explicit ShipChoice(QWidget *parent = 0);
@@ -23,6 +25,7 @@ private slots:
 
 private:
     Ui::ShipChoice *ui;
+    Square getSquare(int x, int y);
 
 protected:
     void mousePressEvent(QMouseEvent *event) override;
