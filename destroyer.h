@@ -6,7 +6,7 @@
 class Destroyer:public Ship
 {
 public:
-    Destroyer();
+    Destroyer(int size, bool sunk):Ship(int size, bool sunk,bool isPartiallyHit){}
 };
 
 #endif // DESTROYER_H

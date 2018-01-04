@@ -8,12 +8,14 @@ BattleScreen::BattleScreen(QWidget *parent) :
     ui->setupUi(this);
 }
 
+void BattleScreen::on_BoutonQuitter_clicked()
+{
+    this->close();
+}
+
 BattleScreen::~BattleScreen()
 {
     delete ui;
 }
 
-void BattleScreen::on_BoutonQuitter_clicked()
-{
-    this->close();
-}
+

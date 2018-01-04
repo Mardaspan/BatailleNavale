@@ -21,8 +21,14 @@ void Ship::sink()
     this->sunk = true;
 }
 
+bool Ship::isPartiallyHit() const
+{
+    return this->partiallyHit;
+}
+
 void Ship::hit()
 {
+  this->partiallyHit=true;
 }
 
 QLabel* Ship::getSprite()

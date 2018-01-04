@@ -14,6 +14,8 @@ class Board
     static const int WIDTH = 510;
     static const int HEIGHT = 510;
     static const int NB_SQUARES = 10;
+    int casesOccupes;
+    bool ajoutCourant;
 
     Destroyer destroyer;
     Submarine submarine;
@@ -21,7 +23,7 @@ class Board
     Battleship battleship;
     Carrier carrier;
     int x, y;
-    Square * squares[NB_SQUARES][NB_SQUARES];
+    Square * squares[NB_SQUARES][NB_SQUARES]; //Liste des cases de la grille
 
 public:
     Board();
@@ -36,6 +38,7 @@ public:
     int getY();
     void setX(int x);
     void setY(int y);
+    bool ajoutEstValide(void); //indique si les donnees generees aleatoirement pour le placement d'un bateau sont valides
 };
 
 #endif // BOARD_H
