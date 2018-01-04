@@ -16,8 +16,6 @@ public:
     ~BattleScreen();
 
 private slots:
-    void on_pushButton_clicked();
-
     void on_BoutonQuitter_clicked();
 
 private:

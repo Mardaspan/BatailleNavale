@@ -16,10 +16,7 @@ public:
     ~Rules();
 
 private slots:
-    void on_pushButton_clicked();
-
     void on_boutonAccueil_clicked();
-
     void on_boutonJeu_clicked();
 
 private:
