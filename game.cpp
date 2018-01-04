@@ -14,3 +14,7 @@ Board Game::getEnnemy()
 {
     return this->ennemy;
 }
+
+void Game::setPlayer(Board b){
+    this->player=b;
+}

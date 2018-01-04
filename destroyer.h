@@ -5,8 +5,15 @@
 
 class Destroyer:public Ship
 {
+    static const int SIZE = 2;
+    Square * squares[SIZE];
+
 public:
-    Destroyer(int size, bool sunk):Ship(int size, bool sunk,bool isPartiallyHit){}
+
+    Destroyer();
+    Square getSquare(int position);
+    void setSquare(int position, Square s);
+
 };
 
 #endif // DESTROYER_H

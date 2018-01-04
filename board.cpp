@@ -6,7 +6,7 @@ Board::Board()
     {
         for(int j=0; j<NB_SQUARES; j++)
         {
-            squares[i][j] = new Square(i*Square::WIDTH+10, j*Square::HEIGHT+10);
+            squares[i][j] = new Square(i, j);
         }
     }
 }
@@ -36,6 +36,11 @@ Carrier Board::getCarrier()
     return this->carrier;
 }
 
+Square Board::getSquare(int x, int y)
+{
+    return * squares[x][y];
+}
+
 int Board::getWidth()
 {
     return WIDTH;
@@ -44,6 +49,11 @@ int Board::getWidth()
 int Board::getHeight()
 {
     return HEIGHT;
+}
+
+int Board::getNbSquares()
+{
+    return NB_SQUARES;
 }
 
 int Board::getX()

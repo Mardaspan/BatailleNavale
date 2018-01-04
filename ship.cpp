@@ -4,11 +4,12 @@ Ship::Ship(int s)
 {
     this->size = s;
     this->sunk = false;
+    this->partiallyHit = false;
 }
 
-Ship::~Ship()
+int Ship::getSize()
 {
-    delete sprite;
+    return this->size;
 }
 
 bool Ship::isSunk() const
@@ -29,14 +30,4 @@ bool Ship::isPartiallyHit() const
 void Ship::hit()
 {
   this->partiallyHit=true;
-}
-
-QLabel* Ship::getSprite()
-{
-    return this->sprite;
-}
-
-void Ship::setSprite(QLabel* image)
-{
-    this->sprite = image;
 }

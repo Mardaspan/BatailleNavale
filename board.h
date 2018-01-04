@@ -11,8 +11,8 @@
 
 class Board
 {
-    static const int WIDTH = 510;
-    static const int HEIGHT = 510;
+    static const int WIDTH = 500;
+    static const int HEIGHT = 500;
     static const int NB_SQUARES = 10;
     int casesOccupes;
     bool ajoutCourant;
@@ -32,8 +32,10 @@ public:
     Cruiser getCruiser();
     Battleship getBattleship();
     Carrier getCarrier();
+    Square getSquare(int x, int y);
     int getWidth();
     int getHeight();
+    int getNbSquares();
     int getX();
     int getY();
     void setX(int x);
