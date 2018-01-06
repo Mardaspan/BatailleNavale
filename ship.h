@@ -1,22 +1,28 @@
 #ifndef SHIP_H
 #define SHIP_H
 
-#include "square.h"
 #include <iostream>
+#include <vector>
+#include "square.h"
+using namespace std;
 
 class Ship
 {
     int size;
     bool sunk;
     bool partiallyHit;
+    vector<Square*> squares;
 
 public:
     Ship(int s);
+    void hit();
+    void sink();
+    Square *getSquare(int position);
+    void addSquare(Square *s);
+    void resetSquares();
     int getSize();
     bool isSunk() const;
-    void sink();
-     bool isPartiallyHit() const;
-    void hit();
+    bool isPartiallyHit() const;
 };
 
 #endif // SHIP_H

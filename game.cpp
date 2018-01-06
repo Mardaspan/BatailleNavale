@@ -16,5 +16,5 @@ Board Game::getEnnemy()
 }
 
 void Game::setPlayer(Board b){
-    this->player=b;
+    this->player = b;
 }

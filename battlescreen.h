@@ -14,6 +14,7 @@ class BattleScreen : public Game
 public:
     explicit BattleScreen(QWidget *parent = 0);
     ~BattleScreen();
+    void initialisation(Board player);
 
 private slots:
     void on_BoutonQuitter_clicked();

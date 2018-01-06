@@ -6,39 +6,39 @@ Board::Board()
     {
         for(int j=0; j<NB_SQUARES; j++)
         {
-            squares[i][j] = new Square(i, j);
+            squares[i][j] = *(new Square(i, j));
         }
     }
 }
 
-Destroyer Board::getDestroyer()
+Destroyer * Board::getDestroyer()
 {
-    return this->destroyer;
+    return &this->destroyer;
 }
 
-Submarine Board::getSubmarine()
+Submarine * Board::getSubmarine()
 {
-    return this->submarine;
+    return &this->submarine;
 }
 
-Cruiser Board::getCruiser()
+Cruiser * Board::getCruiser()
 {
-    return this->cruiser;
+    return &this->cruiser;
 }
 
-Battleship Board::getBattleship()
+Battleship * Board::getBattleship()
 {
-    return this->battleship;
+    return &this->battleship;
 }
 
-Carrier Board::getCarrier()
+Carrier * Board::getCarrier()
 {
-    return this->carrier;
+    return &this->carrier;
 }
 
-Square Board::getSquare(int x, int y)
+Square * Board::getSquare(int x, int y)
 {
-    return * squares[x][y];
+    return addressof(squares[x][y]);
 }
 
 int Board::getWidth()

@@ -4,7 +4,9 @@
 #include <QApplication>
 #include <QLabel>
 #include <QMouseEvent>
+#include <iostream>
 #include "game.h"
+using namespace std;
 
 namespace Ui {
 class ShipChoice;
@@ -27,7 +29,7 @@ private slots:
 
 private:
     Ui::ShipChoice *ui;
-    Square getSquare(int x, int y);
+    Square * getSquare(int x, int y);
 
 protected:
     void mousePressEvent(QMouseEvent *event) override;

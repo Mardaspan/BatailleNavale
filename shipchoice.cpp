@@ -19,7 +19,7 @@ void ShipChoice::on_BoutonRetour_clicked()
     y.exec();
 }
 
-Square ShipChoice::getSquare(int x, int y)
+Square * ShipChoice::getSquare(int x, int y)
 {
     int xSquare, ySquare;
     bool defined = false;
@@ -86,7 +86,7 @@ void ShipChoice::mouseMoveEvent(QMouseEvent *event)
 
 void ShipChoice::mouseReleaseEvent(QMouseEvent *event)
 {
-    Square position;
+    Square * position;
     int added_width = Square::WIDTH + this->player.getX() + Square::WIDTH/8;
     int added_height = Square::HEIGHT + this->player.getY() + 4;
 
@@ -103,52 +103,62 @@ void ShipChoice::mouseReleaseEvent(QMouseEvent *event)
             // Define the ship squares
             if(this->ship->objectName() == "carrier")
             {
-                if(position.getX() + this->player.getCarrier().getSize() > this->player.getNbSquares()) {
-                    position = this->player.getSquare(this->player.getNbSquares()-this->player.getCarrier().getSize(), position.getY());
+                this->player.getCarrier()->resetSquares();
+
+                if(position->getX() + this->player.getCarrier()->getSize() > this->player.getNbSquares()) {
+                    position = this->player.getSquare(this->player.getNbSquares()-this->player.getCarrier()->getSize(), position->getY());
                 }
 
-                for(int i=0; i<this->player.getCarrier().getSize(); i++)
+                for(int i=0; i<this->player.getCarrier()->getSize(); i++)
                 {
-                    this->player.getCarrier().setSquare(i, this->player.getSquare(position.getX()+i, position.getY()));
+                    this->player.getCarrier()->addSquare(this->player.getSquare(position->getX()+i, position->getY()));
                 }
             } else if(this->ship->objectName() == "battleship") {
-                if(position.getX() + this->player.getBattleship().getSize() > this->player.getNbSquares()) {
-                    position = this->player.getSquare(this->player.getNbSquares()-this->player.getBattleship().getSize(), position.getY());
+                this->player.getBattleship()->resetSquares();
+
+                if(position->getX() + this->player.getBattleship()->getSize() > this->player.getNbSquares()) {
+                    position = this->player.getSquare(this->player.getNbSquares()-this->player.getBattleship()->getSize(), position->getY());
                 }
 
-                for(int i=0; i<this->player.getBattleship().getSize(); i++)
+                for(int i=0; i<this->player.getBattleship()->getSize(); i++)
                 {
-                    this->player.getBattleship().setSquare(i, this->player.getSquare(position.getX()+i, position.getY()));
+                    this->player.getBattleship()->addSquare(this->player.getSquare(position->getX()+i, position->getY()));
                 }
             } else if(this->ship->objectName() == "cruiser") {
-                if(position.getX() + this->player.getCruiser().getSize() > this->player.getNbSquares()) {
-                    position = this->player.getSquare(this->player.getNbSquares()-this->player.getCruiser().getSize(), position.getY());
+                this->player.getCruiser()->resetSquares();
+
+                if(position->getX() + this->player.getCruiser()->getSize() > this->player.getNbSquares()) {
+                    position = this->player.getSquare(this->player.getNbSquares()-this->player.getCruiser()->getSize(), position->getY());
                 }
 
-                for(int i=0; i<this->player.getCruiser().getSize(); i++)
+                for(int i=0; i<this->player.getCruiser()->getSize(); i++)
                 {
-                    this->player.getCruiser().setSquare(i, this->player.getSquare(position.getX()+i, position.getY()));
+                    this->player.getCruiser()->addSquare(this->player.getSquare(position->getX()+i, position->getY()));
                 }
             } else if(this->ship->objectName() == "submarine") {
-                if(position.getX() + this->player.getSubmarine().getSize() > this->player.getNbSquares()) {
-                    position = this->player.getSquare(this->player.getNbSquares()-this->player.getSubmarine().getSize(), position.getY());
+                this->player.getSubmarine()->resetSquares();
+
+                if(position->getX() + this->player.getSubmarine()->getSize() > this->player.getNbSquares()) {
+                    position = this->player.getSquare(this->player.getNbSquares()-this->player.getSubmarine()->getSize(), position->getY());
                 }
-                for(int i=0; i<this->player.getSubmarine().getSize(); i++)
+                for(int i=0; i<this->player.getSubmarine()->getSize(); i++)
                 {
-                    this->player.getSubmarine().setSquare(i, this->player.getSquare(position.getX()+i, position.getY()));
+                    this->player.getSubmarine()->addSquare(this->player.getSquare(position->getX()+i, position->getY()));
                 }
             } else if(this->ship->objectName() == "destroyer") {
-                if(position.getX() + this->player.getDestroyer().getSize() > this->player.getNbSquares()) {
-                    position = this->player.getSquare(this->player.getNbSquares()-this->player.getDestroyer().getSize(), position.getY());
+                this->player.getDestroyer()->resetSquares();
+
+                if(position->getX() + this->player.getDestroyer()->getSize() > this->player.getNbSquares()) {
+                    position = this->player.getSquare(this->player.getNbSquares()-this->player.getDestroyer()->getSize(), position->getY());
                 }
 
-                for(int i=0; i<this->player.getDestroyer().getSize(); i++)
+                for(int i=0; i<this->player.getDestroyer()->getSize(); i++)
                 {
-                    this->player.getDestroyer().setSquare(i, this->player.getSquare(position.getX()+i, position.getY()));
+                    this->player.getDestroyer()->addSquare(this->player.getSquare(position->getX()+i, position->getY()));
                 }
             }
 
-            this->ship->move(position.getX()*Square::WIDTH+added_width, position.getY()*Square::HEIGHT+added_height);
+            this->ship->move(position->getX()*Square::WIDTH+added_width, position->getY()*Square::HEIGHT+added_height);
             this->startX = 0;
             this->startY = 0;
             this->ship = NULL;
@@ -158,7 +168,7 @@ void ShipChoice::mouseReleaseEvent(QMouseEvent *event)
 
 void ShipChoice::on_BoutonSuivant_clicked()
 {   BattleScreen x;
-    x.setPlayer(this->player);
+    x.initialisation(this->player);
     this->hide();
     x.exec();
 }

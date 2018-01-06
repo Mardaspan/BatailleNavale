@@ -23,16 +23,16 @@ class Board
     Battleship battleship;
     Carrier carrier;
     int x, y;
-    Square * squares[NB_SQUARES][NB_SQUARES]; //Liste des cases de la grille
+    Square squares[NB_SQUARES][NB_SQUARES]; //Liste des cases de la grille
 
 public:
     Board();
-    Destroyer getDestroyer();
-    Submarine getSubmarine();
-    Cruiser getCruiser();
-    Battleship getBattleship();
-    Carrier getCarrier();
-    Square getSquare(int x, int y);
+    Destroyer *getDestroyer();
+    Submarine *getSubmarine();
+    Cruiser *getCruiser();
+    Battleship *getBattleship();
+    Carrier *getCarrier();
+    Square *getSquare(int x, int y);
     int getWidth();
     int getHeight();
     int getNbSquares();
