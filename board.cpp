@@ -66,6 +66,16 @@ int Board::getY()
     return this->y;
 }
 
+bool Board::isShipsPlaced()
+{
+    if(!destroyer.isPlaced() || !submarine.isPlaced() || !cruiser.isPlaced() || !battleship.isPlaced() || !carrier.isPlaced())
+    {
+        return false;
+    } else {
+        return true;
+    }
+}
+
 void Board::setX(int x)
 {
     this->x = x;

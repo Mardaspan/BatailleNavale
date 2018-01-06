@@ -2,7 +2,8 @@ Backgrounds :
 	* Background 1 (Faucon Millenium) : http://artentertaiment1.blogspot.fr/2013/08/star-wars-wallpaper.html
 	* Background 2 (Space) : http://d5qsyj6vaeh11.cloudfront.net/images/destinations/star%20wars/star-wars-landing/SW-node-Background.jpg
 	* Backgroud 3 (Death Star) : https://wallpapercave.com/death-star-background
+	* Backrgound 4 (Home Window Background) : http://www.strangebeaver.com/wp-content/uploads/2015/12/wpw1216/star-wars-wallpaper-63.jpg
 
 Sprites :
-	* Vaisseaux de la république : http://orig03.deviantart.net/c7d4/f/2009/041/1/e/republic_ships_by_omega_2438.jpg
+	* Vaisseaux de la République : http://orig03.deviantart.net/c7d4/f/2009/041/1/e/republic_ships_by_omega_2438.jpg
 	* Vaisseaux de l'Empire : https://marcusstarkiller.deviantart.com/art/Capital-Ships-of-the-Fel-Empire-449413965

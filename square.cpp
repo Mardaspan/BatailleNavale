@@ -2,14 +2,14 @@
 
 Square::Square()
 {
-    this->touche = false;
-    this->occupe = false;
+    this->hit = false;
+    this->occupied = false;
 }
 
 Square::Square(int x, int y)
 {
-    this->touche = false;
-    this->occupe = false;
+    this->hit = false;
+    this->occupied = false;
     this->x = x;
     this->y = y;
 }
@@ -22,4 +22,24 @@ int Square::getX()
 int Square::getY()
 {
     return this->y;
+}
+
+bool Square::isOccupied()
+{
+    return this->occupied;
+}
+
+bool Square::isHit()
+{
+    return this->hit;
+}
+
+void Square::setOccupied(bool o)
+{
+    this->occupied = o;
+}
+
+void Square::setHit(bool h)
+{
+    this->hit = h;
 }

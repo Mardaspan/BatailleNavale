@@ -23,6 +23,7 @@ public:
     int getSize();
     bool isSunk() const;
     bool isPartiallyHit() const;
+    bool isPlaced();
 };
 
 #endif // SHIP_H

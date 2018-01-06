@@ -16,5 +16,7 @@
         <file alias="windows_background_1">images/window_background_1.png</file>
         <file alias="window_background_2">images/window_background_2.png</file>
         <file alias="grid_background_2">images/grid_background_2.png</file>
+        <file alias="window_battlescreen_1">images/window_battlescreen_1.png</file>
+        <file alias="window_home_1">images/window_home_1.png</file>
     </qresource>
 </RCC>

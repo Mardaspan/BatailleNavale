@@ -24,12 +24,12 @@ public:
 
 private slots:
     void on_BoutonRetour_clicked();
-
     void on_BoutonSuivant_clicked();
 
 private:
     Ui::ShipChoice *ui;
     Square * getSquare(int x, int y);
+    bool isShipPositionOK(Square *first, Ship *ship);
 
 protected:
     void mousePressEvent(QMouseEvent *event) override;

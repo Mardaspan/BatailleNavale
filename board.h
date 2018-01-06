@@ -38,6 +38,7 @@ public:
     int getNbSquares();
     int getX();
     int getY();
+    bool isShipsPlaced();
     void setX(int x);
     void setY(int y);
     bool ajoutEstValide(void); //indique si les donnees generees aleatoirement pour le placement d'un bateau sont valides

@@ -12,13 +12,6 @@ ShipChoice::ShipChoice(QWidget *parent) :
     this->player.setY(ui->grid->y());
 }
 
-void ShipChoice::on_BoutonRetour_clicked()
-{
-    Home y;
-    this->hide();
-    y.exec();
-}
-
 Square * ShipChoice::getSquare(int x, int y)
 {
     int xSquare, ySquare;
@@ -56,6 +49,20 @@ Square * ShipChoice::getSquare(int x, int y)
     return this->player.getSquare(xSquare, ySquare);
 }
 
+bool ShipChoice::isShipPositionOK(Square *first, Ship *ship)
+{
+    bool ok = true;
+
+    for (int i=0; i < ship->getSize(); ++i) {
+        if(this->player.getSquare(first->getX()+i, first->getY())->isOccupied())
+        {
+            ok = false;
+        }
+    }
+
+    return ok;
+}
+
 ShipChoice::~ShipChoice()
 {
     delete ui;
@@ -86,7 +93,8 @@ void ShipChoice::mouseMoveEvent(QMouseEvent *event)
 
 void ShipChoice::mouseReleaseEvent(QMouseEvent *event)
 {
-    Square * position;
+    Square *position;
+    Ship *selected;
     int added_width = Square::WIDTH + this->player.getX() + Square::WIDTH/8;
     int added_height = Square::HEIGHT + this->player.getY() + 4;
 
@@ -103,72 +111,60 @@ void ShipChoice::mouseReleaseEvent(QMouseEvent *event)
             // Define the ship squares
             if(this->ship->objectName() == "carrier")
             {
-                this->player.getCarrier()->resetSquares();
-
-                if(position->getX() + this->player.getCarrier()->getSize() > this->player.getNbSquares()) {
-                    position = this->player.getSquare(this->player.getNbSquares()-this->player.getCarrier()->getSize(), position->getY());
-                }
-
-                for(int i=0; i<this->player.getCarrier()->getSize(); i++)
-                {
-                    this->player.getCarrier()->addSquare(this->player.getSquare(position->getX()+i, position->getY()));
-                }
+                selected = this->player.getCarrier();
             } else if(this->ship->objectName() == "battleship") {
-                this->player.getBattleship()->resetSquares();
-
-                if(position->getX() + this->player.getBattleship()->getSize() > this->player.getNbSquares()) {
-                    position = this->player.getSquare(this->player.getNbSquares()-this->player.getBattleship()->getSize(), position->getY());
-                }
-
-                for(int i=0; i<this->player.getBattleship()->getSize(); i++)
-                {
-                    this->player.getBattleship()->addSquare(this->player.getSquare(position->getX()+i, position->getY()));
-                }
+                selected = this->player.getBattleship();
             } else if(this->ship->objectName() == "cruiser") {
-                this->player.getCruiser()->resetSquares();
-
-                if(position->getX() + this->player.getCruiser()->getSize() > this->player.getNbSquares()) {
-                    position = this->player.getSquare(this->player.getNbSquares()-this->player.getCruiser()->getSize(), position->getY());
-                }
-
-                for(int i=0; i<this->player.getCruiser()->getSize(); i++)
-                {
-                    this->player.getCruiser()->addSquare(this->player.getSquare(position->getX()+i, position->getY()));
-                }
+                selected = this->player.getCruiser();
             } else if(this->ship->objectName() == "submarine") {
-                this->player.getSubmarine()->resetSquares();
-
-                if(position->getX() + this->player.getSubmarine()->getSize() > this->player.getNbSquares()) {
-                    position = this->player.getSquare(this->player.getNbSquares()-this->player.getSubmarine()->getSize(), position->getY());
-                }
-                for(int i=0; i<this->player.getSubmarine()->getSize(); i++)
-                {
-                    this->player.getSubmarine()->addSquare(this->player.getSquare(position->getX()+i, position->getY()));
-                }
+                selected = this->player.getSubmarine();
             } else if(this->ship->objectName() == "destroyer") {
-                this->player.getDestroyer()->resetSquares();
-
-                if(position->getX() + this->player.getDestroyer()->getSize() > this->player.getNbSquares()) {
-                    position = this->player.getSquare(this->player.getNbSquares()-this->player.getDestroyer()->getSize(), position->getY());
-                }
-
-                for(int i=0; i<this->player.getDestroyer()->getSize(); i++)
-                {
-                    this->player.getDestroyer()->addSquare(this->player.getSquare(position->getX()+i, position->getY()));
-                }
+                selected = this->player.getDestroyer();
             }
 
-            this->ship->move(position->getX()*Square::WIDTH+added_width, position->getY()*Square::HEIGHT+added_height);
-            this->startX = 0;
-            this->startY = 0;
-            this->ship = NULL;
+            // If the ship is already defined, reset the linked squares
+            selected->resetSquares();
+
+            // If the ship get out of the board, put the whole in it
+            if(position->getX() + selected->getSize() > this->player.getNbSquares()) {
+                position = this->player.getSquare(this->player.getNbSquares()-selected->getSize(), position->getY());
+            }
+
+            // Check if the ship's position isn't already taken by another
+            if(!this->isShipPositionOK(position, selected))
+            {
+                this->ship->move(this->startX, this->startY);
+            } else {
+                for(int i=0; i<selected->getSize(); i++)
+                {
+                    selected->addSquare(this->player.getSquare(position->getX()+i, position->getY()));
+                }
+
+                // Move the ship
+                this->ship->move(position->getX()*Square::WIDTH+added_width, position->getY()*Square::HEIGHT+added_height);
+
+                // Reset
+                this->startX = 0;
+                this->startY = 0;
+                this->ship = NULL;
+            }
         }
     }
 }
 
 void ShipChoice::on_BoutonSuivant_clicked()
-{   BattleScreen x;
-    x.initialisation(this->player);
+{
+    if(this->player.isShipsPlaced()) {
+        BattleScreen x;
+        x.initialisation(this->player);
+        this->hide();
+        x.exec();
+    }
+}
+
+void ShipChoice::on_BoutonRetour_clicked()
+{
+    Home y;
     this->hide();
-    x.exec();
+    y.exec();
 }

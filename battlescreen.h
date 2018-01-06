@@ -21,6 +21,7 @@ private slots:
 
 private:
     Ui::BattleScreen *ui;
+    bool isShipPositionOK(Square *first, Ship *ship);
 };
 
 #endif // BATTLESCREEN_H
