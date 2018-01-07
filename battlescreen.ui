@@ -289,6 +289,86 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:36pt; color:#ff0000;&quot;&gt;Premier ordre !&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
+  <widget class="QLabel" name="cdestroyer">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>40</y>
+     <width>85</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="images.qrc">:/ships/empire_destroyer</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ccruiser">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>40</y>
+     <width>125</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="images.qrc">:/ships/empire_cruiser</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="csubmarine">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>40</y>
+     <width>125</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="images.qrc">:/ships/empire_submarine</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="cbattleship">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>40</y>
+     <width>175</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="images.qrc">:/ships/empire_battleship</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ccarrier">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>40</y>
+     <width>220</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="images.qrc">:/ships/empire_carrier</pixmap>
+   </property>
+  </widget>
   <zorder>textDefeat</zorder>
   <zorder>textVictory</zorder>
   <zorder>background</zorder>
@@ -304,6 +384,11 @@ p, li { white-space: pre-wrap; }
   <zorder>pcarrier</zorder>
   <zorder>textPlayer</zorder>
   <zorder>textAI</zorder>
+  <zorder>cdestroyer</zorder>
+  <zorder>ccruiser</zorder>
+  <zorder>csubmarine</zorder>
+  <zorder>cbattleship</zorder>
+  <zorder>ccarrier</zorder>
  </widget>
  <resources>
   <include location="images.qrc"/>

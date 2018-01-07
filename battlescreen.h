@@ -26,6 +26,7 @@ private slots:
 
 private:
     Ui::BattleScreen *ui;
+    void checkIfShowsEnnemy();
     bool isShipPositionOK(Square *first, Ship *ship);
 
 protected:
