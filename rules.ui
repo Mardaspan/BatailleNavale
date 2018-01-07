@@ -13,39 +13,29 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="boutonJeu">
+  <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>720</x>
-     <y>10</y>
-     <width>80</width>
-     <height>24</height>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>721</height>
     </rect>
    </property>
    <property name="text">
-    <string>Jouer</string>
+    <string/>
    </property>
-  </widget>
-  <widget class="QPushButton" name="boutonAccueil">
-   <property name="geometry">
-    <rect>
-     <x>720</x>
-     <y>40</y>
-     <width>80</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Accueil</string>
+   <property name="pixmap">
+    <pixmap resource="images.qrc">:/backgrounds/windows_background_1</pixmap>
    </property>
   </widget>
   <widget class="QTextBrowser" name="textBrowser">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>1</y>
+     <x>50</x>
+     <y>80</y>
      <width>721</width>
-     <height>661</height>
+     <height>541</height>
     </rect>
    </property>
    <property name="html">
@@ -59,7 +49,16 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Un jeu de Bataille Navale style &amp;quot;Star Wars&amp;quot;.&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Au début du jeu, chaque joueur place à sa guise tous les bateaux sur sa grille de façon stratégique. Le but étant de compliquer au maximum la tache de son adversaire, c’est-à-dire détruire tous vos navires. Bien entendu, le joueur ne voit pas la grille de son adversaire.&lt;br /&gt;Une fois tous les bateaux en jeu, la partie peut commencer. Un à un, les joueurs se tirent dessus en choissisant les cases (une lettre et un chiffre) pour détruire les navires ennemis.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; &lt;/span&gt;&lt;a name=&quot;docs-internal-guid-d59f2251-d150-3006-356c-f91450b3efbe&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:10pt; color:#000000; background-color:transparent;&quot;&gt;A&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:10pt; color:#000000; background-color:transparent;&quot;&gt;u début de la partie, le joueur et l’IA ont  5 bateaux à placer dans une grille de 100 cases (10 lignes de 10 cases). &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:120%; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Arial'; font-size:10pt; color:#000000; background-color:transparent;&quot;&gt;Les bateaux dont ils disposent sont : &lt;/span&gt;&lt;/p&gt;
+&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; font-family:'monospace'; font-size:10pt; color:#000000; background-color:#ffffff;&quot; align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:120%;&quot;&gt;&lt;span style=&quot; background-color:transparent;&quot;&gt;1 destroyer (2 cases)&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot; font-family:'monospace'; font-size:10pt; color:#000000; background-color:#ffffff;&quot; align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:120%;&quot;&gt;&lt;span style=&quot; background-color:transparent;&quot;&gt;1 croiseur (3 cases)&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot; font-family:'monospace'; font-size:10pt; color:#000000; background-color:#ffffff;&quot; align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:120%;&quot;&gt;&lt;span style=&quot; background-color:transparent;&quot;&gt;1 sous-marin (3 cases)&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot; font-family:'monospace'; font-size:10pt; color:#000000; background-color:#ffffff;&quot; align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:120%;&quot;&gt;&lt;span style=&quot; background-color:transparent;&quot;&gt;1 cuirassé (4 cases) &lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot; font-family:'monospace'; font-size:10pt; color:#000000; background-color:#ffffff;&quot; align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:120%;&quot;&gt;&lt;span style=&quot; background-color:transparent;&quot;&gt;1 porte-avion (5 cases)&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial'; font-size:10pt; color:#000000; background-color:transparent;&quot;&gt;Le joueur place à sa guise tous les bateaux sur sa grille de façon stratégique. Le but est de compliquer au maximum la tache de l’IA, c’est-à-dire détruire tous ses navires. Bien entendu, le joueur ne voit pas la grille de l’IA&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:120%; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Arial'; font-size:10pt; color:#000000; background-color:transparent;&quot;&gt;Une fois tous les bateaux en jeu, la partie peut commencer. Un à un, le joueur et l’IA se tirent dessus en choisissant les cases (une lettre et un chiffre) pour détruire les navires ennemis.&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Bon jeu !&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
@@ -70,7 +69,35 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="boutonJeu">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>10</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Jouer</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="boutonAccueil">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>10</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Accueil</string>
+   </property>
+  </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
  <connections/>
 </ui>
