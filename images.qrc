@@ -1,5 +1,5 @@
 <RCC>
-    <qresource prefix="/images">
+    <qresource prefix="/ships">
         <file alias="empire_battleship">images/empire_battleship.png</file>
         <file alias="empire_carrier">images/empire_carrier.png</file>
         <file alias="empire_cruiser">images/empire_cruiser.png</file>
@@ -18,5 +18,11 @@
         <file alias="grid_background_2">images/grid_background_2.png</file>
         <file alias="window_battlescreen_1">images/window_battlescreen_1.png</file>
         <file alias="window_home_1">images/window_home_1.png</file>
+        <file alias="background_victory">images/background_victory.png</file>
+        <file alias="background_defeat">images/background_defeat.png</file>
+    </qresource>
+    <qresource prefix="/effects">
+        <file alias="blast">images/blast.png</file>
+        <file alias="spot">images/spot.png</file>
     </qresource>
 </RCC>

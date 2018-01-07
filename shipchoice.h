@@ -28,7 +28,6 @@ private slots:
 
 private:
     Ui::ShipChoice *ui;
-    Square * getSquare(int x, int y);
     bool isShipPositionOK(Square *first, Ship *ship);
 
 protected:

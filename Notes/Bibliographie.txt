@@ -3,6 +3,8 @@ Backgrounds :
 	* Background 2 (Space) : http://d5qsyj6vaeh11.cloudfront.net/images/destinations/star%20wars/star-wars-landing/SW-node-Background.jpg
 	* Backgroud 3 (Death Star) : https://wallpapercave.com/death-star-background
 	* Backrgound 4 (Home Window Background) : http://www.strangebeaver.com/wp-content/uploads/2015/12/wpw1216/star-wars-wallpaper-63.jpg
+	* Background 5 (Resistance Background) : http://www.starwars-holonet.com/news/2015/20150305-starwars-aor-annonce-strongholds-resistance-3.jpg
+	* Background 6 (Prime Order Background) : http://3.bp.blogspot.com/-f8boEeIfqj8/VoMLtLps_LI/AAAAAAAAMf8/fM1ea1Kmsic/s1600/Force%2BAwakens%2B02.jpg
 
 Sprites :
 	* Vaisseaux de la République : http://orig03.deviantart.net/c7d4/f/2009/041/1/e/republic_ships_by_omega_2438.jpg

@@ -10,10 +10,13 @@ protected:
     Board player;
     Board ennemy;
 
+    Square * getSquare(Board board, int x, int y);
+
 public:
     explicit Game(QWidget *parent = 0);
     Board getPlayer();
     Board getEnnemy();
+    bool isOver();
     void setPlayer(Board b);
 };
 

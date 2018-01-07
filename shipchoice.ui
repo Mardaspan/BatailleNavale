@@ -103,7 +103,7 @@ p, li { white-space: pre-wrap; }
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="images.qrc">:/images/republic_destroyer</pixmap>
+     <pixmap resource="images.qrc">:/ships/republic_destroyer</pixmap>
     </property>
    </widget>
    <widget class="QLabel" name="submarine">
@@ -119,7 +119,7 @@ p, li { white-space: pre-wrap; }
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="images.qrc">:/images/republic_submarine</pixmap>
+     <pixmap resource="images.qrc">:/ships/republic_submarine</pixmap>
     </property>
    </widget>
    <widget class="QLabel" name="cruiser">
@@ -135,7 +135,7 @@ p, li { white-space: pre-wrap; }
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="images.qrc">:/images/republic_cruiser</pixmap>
+     <pixmap resource="images.qrc">:/ships/republic_cruiser</pixmap>
     </property>
    </widget>
    <widget class="QLabel" name="battleship">
@@ -151,7 +151,7 @@ p, li { white-space: pre-wrap; }
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="images.qrc">:/images/republic_battleship</pixmap>
+     <pixmap resource="images.qrc">:/ships/republic_battleship</pixmap>
     </property>
    </widget>
    <widget class="QLabel" name="carrier">
@@ -167,7 +167,7 @@ p, li { white-space: pre-wrap; }
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="images.qrc">:/images/republic_carrier</pixmap>
+     <pixmap resource="images.qrc">:/ships/republic_carrier</pixmap>
     </property>
    </widget>
    <widget class="QLabel" name="grid">

@@ -15,6 +15,7 @@ class Ship
 
 public:
     Ship(int s);
+    void checkShip();
     void hit();
     void sink();
     Square *getSquare(int position);

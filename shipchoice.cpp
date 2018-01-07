@@ -12,43 +12,6 @@ ShipChoice::ShipChoice(QWidget *parent) :
     this->player.setY(ui->grid->y());
 }
 
-Square * ShipChoice::getSquare(int x, int y)
-{
-    int xSquare, ySquare;
-    bool defined = false;
-    int width = Square::WIDTH;
-    int width_removed = Square::WIDTH + this->player.getX();
-    int height = Square::HEIGHT;
-    int height_removed = Square::HEIGHT + this->player.getY();
-
-    for(int i=0; i<this->player.getNbSquares(); i++)
-    {
-        if(i != this->player.getNbSquares()-1 && x >= i*width+width_removed && x < (i+1)*width+width_removed)
-        {
-            xSquare = i;
-            defined = true;
-        } else if(!defined && i == this->player.getNbSquares()-1) {
-            xSquare = i;
-            defined = true;
-        }
-    }
-
-    defined = false;
-    for(int j=0; j<this->player.getNbSquares(); j++)
-    {
-        if(j != this->player.getNbSquares()-1 && y >= j*height+height_removed && y < (j+1)*height+height_removed)
-        {
-            ySquare = j;
-            defined = true;
-        } else if(!defined && j == this->player.getNbSquares()-1) {
-            ySquare = j;
-            defined = true;
-        }
-    }
-
-    return this->player.getSquare(xSquare, ySquare);
-}
-
 bool ShipChoice::isShipPositionOK(Square *first, Ship *ship)
 {
     bool ok = true;
@@ -106,7 +69,7 @@ void ShipChoice::mouseReleaseEvent(QMouseEvent *event)
             this->ship->move(this->startX, this->startY);
         } else {
             // Define the ship position
-            position = this->getSquare(this->ship->x(), this->ship->y());
+            position = this->getSquare(this->player, this->ship->x(), this->ship->y());
 
             // Define the ship squares
             if(this->ship->objectName() == "carrier")

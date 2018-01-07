@@ -7,6 +7,22 @@ Ship::Ship(int s)
     this->partiallyHit = false;
 }
 
+void Ship::checkShip()
+{
+    bool sunk = true;
+
+    for (int i=0; i < this->squares.size(); ++i) {
+        if(!this->squares.at(i)->isHit())
+        {
+            sunk = false;
+        }
+    }
+
+    if(sunk) {
+        this->sink();
+    }
+}
+
 void Ship::hit()
 {
   this->partiallyHit=true;

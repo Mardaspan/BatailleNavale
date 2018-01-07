@@ -2,12 +2,28 @@
 
 Board::Board()
 {
+    this->over = false;
+
     for(int i=0; i<NB_SQUARES; i++)
     {
         for(int j=0; j<NB_SQUARES; j++)
         {
             squares[i][j] = *(new Square(i, j));
         }
+    }
+}
+
+void Board::checkShips()
+{
+    this->destroyer.checkShip();
+    this->submarine.checkShip();
+    this->cruiser.checkShip();
+    this->battleship.checkShip();
+    this->carrier.checkShip();
+
+    if(this->destroyer.isSunk() && this->submarine.isSunk() && this->cruiser.isSunk() && this->battleship.isSunk() && this->carrier.isSunk())
+    {
+        this->over = true;
     }
 }
 
@@ -64,6 +80,11 @@ int Board::getX()
 int Board::getY()
 {
     return this->y;
+}
+
+bool Board::isOver()
+{
+    return this->over;
 }
 
 bool Board::isShipsPlaced()
