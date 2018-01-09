@@ -1,5 +1,6 @@
 #include "battlescreen.h"
 #include "ui_battlescreen.h"
+#include <QDateTime>
 
 BattleScreen::BattleScreen(QWidget *parent) :
     Game(parent),
@@ -7,6 +8,9 @@ BattleScreen::BattleScreen(QWidget *parent) :
 {
     ui->setupUi(this);
     this->pTurn = false;
+
+    // Initialize random sequence
+    qsrand(QDateTime::currentMSecsSinceEpoch() / 1000);
 
     // Get the computer's grid position
     this->ennemy.setX(ui->aigrid->x());
@@ -91,8 +95,8 @@ void BattleScreen::initialisation(Board player)
     int x, y;
 
     //      Destroyer
-    x = rand() % 9;
-    y = rand() % 10;
+    x = qrand() % 9;
+    y = qrand() % 10;
 
     for(int i=0; i<this->ennemy.getDestroyer()->getSize(); i++)
     {
@@ -100,11 +104,11 @@ void BattleScreen::initialisation(Board player)
     }
 
     //      Submarine
-    x = rand() % 8;
-    y = rand() % 10;
+    x = qrand() % 8;
+    y = qrand() % 10;
     while (!this->isShipPositionOK(this->ennemy.getSquare(x, y), this->ennemy.getSubmarine())) {
-        x = rand() % 8;
-        y = rand() % 10;
+        x = qrand() % 8;
+        y = qrand() % 10;
     }
 
     for(int i=0; i<this->ennemy.getSubmarine()->getSize(); i++)
@@ -113,11 +117,11 @@ void BattleScreen::initialisation(Board player)
     }
 
     //      Cruiser
-    x = rand() % 8;
-    y = rand() % 10;
+    x = qrand() % 8;
+    y = qrand() % 10;
     while (!this->isShipPositionOK(this->ennemy.getSquare(x, y), this->ennemy.getCruiser())) {
-        x = rand() % 8;
-        y = rand() % 10;
+        x = qrand() % 8;
+        y = qrand() % 10;
     }
 
     for(int i=0; i<this->ennemy.getCruiser()->getSize(); i++)
@@ -126,11 +130,11 @@ void BattleScreen::initialisation(Board player)
     }
 
     //      Battleship
-    x = rand() % 7;
-    y = rand() % 10;
+    x = qrand() % 7;
+    y = qrand() % 10;
     while (!this->isShipPositionOK(this->ennemy.getSquare(x, y), this->ennemy.getBattleship())) {
-        x = rand() % 7;
-        y = rand() % 10;
+        x = qrand() % 7;
+        y = qrand() % 10;
     }
 
     for(int i=0; i<this->ennemy.getBattleship()->getSize(); i++)
@@ -139,11 +143,11 @@ void BattleScreen::initialisation(Board player)
     }
 
     //      Carrier
-    x = rand() % 6;
-    y = rand() % 10;
+    x = qrand() % 6;
+    y = qrand() % 10;
     while (!this->isShipPositionOK(this->ennemy.getSquare(x, y), this->ennemy.getCarrier())) {
-        x = rand() % 6;
-        y = rand() % 10;
+        x = qrand() % 6;
+        y = qrand() % 10;
     }
 
     for(int i=0; i<this->ennemy.getCarrier()->getSize(); i++)
@@ -191,12 +195,12 @@ void BattleScreen::computerTurn()
     {
         this->pTurn = false;
 
-        x = rand() % 10;
-        y = rand() % 10;
+        x = qrand() % 10;
+        y = qrand() % 10;
         while(this->player.getSquare(x, y)->isHit())
         {
-            x = rand() % 10;
-            y = rand() % 10;
+            x = qrand() % 10;
+            y = qrand() % 10;
         }
 
         Square *square = this->player.getSquare(x, y);
