@@ -1,10 +1,10 @@
 #include "ship.h"
+#include <QException>
 
 Ship::Ship(int s)
 {
     this->size = s;
     this->sunk = false;
-    this->partiallyHit = false;
 }
 
 void Ship::checkShip()
@@ -21,11 +21,6 @@ void Ship::checkShip()
     if(sunk) {
         this->sink();
     }
-}
-
-void Ship::hit()
-{
-  this->partiallyHit=true;
 }
 
 void Ship::sink()
@@ -45,7 +40,7 @@ void Ship::addSquare(Square *s)
         s->setOccupied(true);
         this->squares.push_back(s);
     } else {
-        cerr << "Ship error : All squares are already defined." << endl;
+        throw QException();
     }
 }
 
@@ -66,11 +61,6 @@ int Ship::getSize()
 bool Ship::isSunk() const
 {
     return this->sunk;
-}
-
-bool Ship::isPartiallyHit() const
-{
-    return this->partiallyHit;
 }
 
 bool Ship::isPlaced()

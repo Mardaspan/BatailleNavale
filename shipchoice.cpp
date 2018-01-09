@@ -2,6 +2,7 @@
 #include "ui_shipchoice.h"
 #include "home.h"
 #include "battlescreen.h"
+#include <QException>
 
 ShipChoice::ShipChoice(QWidget *parent) :
     Game(parent),
@@ -11,12 +12,6 @@ ShipChoice::ShipChoice(QWidget *parent) :
     this->player.setX(ui->grid->x());
     this->player.setY(ui->grid->y());
 }
-/**
- * @brief ShipChoice::isShipPositionOK
- * @param first
- * @param ship
- * @return
- */
 
 bool ShipChoice::isShipPositionOK(Square *first, Ship *ship)
 {
@@ -106,7 +101,12 @@ void ShipChoice::mouseReleaseEvent(QMouseEvent *event)
             } else {
                 for(int i=0; i<selected->getSize(); i++)
                 {
-                    selected->addSquare(this->player.getSquare(position->getX()+i, position->getY()));
+                    try {
+                        selected->addSquare(this->player.getSquare(position->getX()+i, position->getY()));
+                    } catch(QException e) {
+                        cerr << "Ship error : All squares are already defined." << endl;
+                    }
+
                 }
 
                 // Move the ship

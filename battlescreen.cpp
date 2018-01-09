@@ -28,6 +28,7 @@ BattleScreen::BattleScreen(QWidget *parent) :
     ui->textVictory->setVisible(false);
     ui->textDefeat->setVisible(false);
 
+    // Hide the button which start a new game
     ui->npButton->setVisible(false);
     ui->npButton->setEnabled(false);
 }
