@@ -1,6 +1,7 @@
 #include "battlescreen.h"
 #include "ui_battlescreen.h"
 #include <QDateTime>
+#include "shipchoice.h"
 
 BattleScreen::BattleScreen(QWidget *parent) :
     Game(parent),
@@ -26,6 +27,9 @@ BattleScreen::BattleScreen(QWidget *parent) :
     // Hide the game over's texts
     ui->textVictory->setVisible(false);
     ui->textDefeat->setVisible(false);
+
+    ui->npButton->setVisible(false);
+    ui->npButton->setEnabled(false);
 }
 
 BattleScreen::~BattleScreen()
@@ -182,6 +186,8 @@ void BattleScreen::playerTurn()
             ui->textDefeat->raise();
             ui->textDefeat->setVisible(true);
         }
+        ui->npButton->setVisible(true);
+        ui->npButton->setEnabled(true);
     }
 }
 
@@ -233,7 +239,10 @@ void BattleScreen::computerTurn()
             ui->textDefeat->raise();
             ui->textDefeat->setVisible(true);
         }
+        ui->npButton->setVisible(true);
+        ui->npButton->setEnabled(true);
     }
+
 }
 
 void BattleScreen::mousePressEvent(QMouseEvent *event)
@@ -280,3 +289,11 @@ void BattleScreen::on_BoutonQuitter_clicked()
 }
 
 
+
+void BattleScreen::on_npButton_clicked()
+{
+    ShipChoice x;
+    this->hide();
+    x.exec();
+
+}

@@ -11,6 +11,12 @@ ShipChoice::ShipChoice(QWidget *parent) :
     this->player.setX(ui->grid->x());
     this->player.setY(ui->grid->y());
 }
+/**
+ * @brief ShipChoice::isShipPositionOK
+ * @param first
+ * @param ship
+ * @return
+ */
 
 bool ShipChoice::isShipPositionOK(Square *first, Ship *ship)
 {

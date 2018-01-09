@@ -24,6 +24,8 @@ public:
 private slots:
     void on_BoutonQuitter_clicked();
 
+    void on_npButton_clicked();
+
 private:
     Ui::BattleScreen *ui;
     void checkIfShowsEnnemy();

@@ -20,8 +20,6 @@ private slots:
 
     void on_BoutonQ_clicked();
 
-    //void on_BoutonR_clicked();
-
     void on_BoutonR_clicked();
 
 private:
