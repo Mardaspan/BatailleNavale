@@ -17,9 +17,7 @@ public:
 
 private slots:
     void on_BoutonNP_clicked();
-
     void on_BoutonQ_clicked();
-
     void on_BoutonR_clicked();
 
 private:
