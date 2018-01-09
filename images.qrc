@@ -25,4 +25,7 @@
         <file alias="blast">images/blast.png</file>
         <file alias="spot">images/spot.png</file>
     </qresource>
+    <qresource prefix="/fonts">
+        <file alias="Starjedi">fonts/Starjedi.ttf</file>
+    </qresource>
 </RCC>

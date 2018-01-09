@@ -372,11 +372,16 @@ p, li { white-space: pre-wrap; }
   <widget class="QPushButton" name="npButton">
    <property name="geometry">
     <rect>
-     <x>942</x>
+     <x>922</x>
      <y>60</y>
-     <width>111</width>
+     <width>131</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Star Jedi</family>
+    </font>
    </property>
    <property name="text">
     <string>Nouvelle Partie</string>
